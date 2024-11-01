@@ -268,7 +268,7 @@ private void checkAnswers() {
 
     private void saveScore() {
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/QuizGameDB", "root", "aayush1291");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/QuizGameDB", "username", "password");
             PreparedStatement ps = con.prepareStatement("INSERT INTO scores (name, domain, marks) VALUES (?, ?, ?)");
             ps.setString(1, name);
             ps.setString(2, domain);

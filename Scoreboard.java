@@ -25,7 +25,7 @@ public class Scoreboard extends JFrame {
 
         // Fetch data from the database and populate the table model
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/QuizGameDB", "root", "aayush1291");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/QuizGameDB", "username", "password");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM scores");
 
